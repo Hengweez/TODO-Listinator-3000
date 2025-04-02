@@ -14,11 +14,11 @@ It's a todo list that helps you keep track of your tasks.
 
 ## File structure
 
-data/
-| completed_tasks.txt # Stores completed tasks
-| tasks.txt # Stores pending tasks
-| backup.zip # Because saving overwrites old data, we've provided a backup.
-main.py # Main scripts
+- data/
+  - completed_tasks.txt # Stores completed tasks
+  - tasks.txt # Stores pending tasks
+  - backup.zip # Because saving overwrites old data, we've provided a backup.
+- main.py # Main scripts
 
 ## Tasks
 
