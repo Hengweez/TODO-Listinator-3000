@@ -8,7 +8,7 @@ def list_tasks(pending_tasks, completed_tasks):
     if len(pending_tasks) == 0:
         print("None")
     else:
-        for i, task in enumerate(completed_tasks):
+        for i, task in enumerate(pending_tasks):
             print(f"{i + 1}: {task}")
 
     print("\nCompleted tasks:")
@@ -29,6 +29,10 @@ def mark_as_completed(pending_tasks, completed_tasks):
             print(f"{i + 1}: {task}")
 
     taskNumber = int(input("\nPlease input task number: "))
+    while taskNumber < 0:
+        taskNumber = int(input("\nPlease input a positivea" \
+        " task number: "))
+
 
     completed_tasks.append(pending_tasks.pop(taskNumber - 1))
 
@@ -59,6 +63,7 @@ def load_tasks(filename):
         task = file.readline()
         while task:
             tasks.append(task.strip())
+            task = file.readline()
     return tasks
 
 
@@ -69,7 +74,7 @@ def main():
     print("Todo-listinator 3000\n")
 
     tasks = load_tasks("data/tasks.txt")
-    completed_tasks = load_tasks("completed_tasks.txt")
+    completed_tasks = load_tasks("data/completed_tasks.txt")
 
     while not quit:
         print(
