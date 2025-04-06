@@ -30,8 +30,7 @@ def mark_as_completed(pending_tasks, completed_tasks):
 
     taskNumber = int(input("\nPlease input task number: "))
     while taskNumber < 0:
-        taskNumber = int(input("\nPlease input a positivea" \
-        " task number: "))
+        taskNumber = int(input("\nPlease input a positive task number: "))
 
 
     completed_tasks.append(pending_tasks.pop(taskNumber - 1))
